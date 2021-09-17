@@ -315,11 +315,7 @@ a {
   border: none;
 }
 
-.productos__card {
-  width: 17%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
+
 .productos__card img {
   width: 100%;
   height: auto;
@@ -329,21 +325,7 @@ a {
   -o-object-position: center;
      object-position: center;
 }
-@media screen and (min-width: 0px) {
-  .productos__card {
-    width: 45%;
-  }
-}
-@media screen and (min-width: 700px) {
-  .productos__card {
-    width: 30%;
-  }
-}
-@media screen and (min-width: 900px) {
-  .productos__card {
-    width: 17%;
-  }
-}
+
 
 .productos__desc .productos__precio {
   font-family: Roboto;
