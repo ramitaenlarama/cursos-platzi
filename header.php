@@ -7,9 +7,17 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
+    <?php do_action( 'storefront_before_site' ); ?>
+	<?php do_action( 'storefront_before_header' ); ?>
+
     <?php get_template_part('template-parts/content','header'); ?>
 
-    <main class="productos">
-        <div class="container-fluid gx-5">
+	
+    <?php do_action( 'storefront_before_content' ); ?>
+	<div id="content" class="site-content" tabindex="-1">
+		<div class="col-full">
+
+		<?php
+		do_action( 'storefront_content_top' );
