@@ -92,11 +92,10 @@ function plz_add_custom_post_type(){
     );
 
 
-    register_post_type('
-    ',$args);
+    register_post_type('producto',$args);
 }
 
-add_action("init","plz_add_custom_post_type");
+//add_action("init","plz_add_custom_post_type");
 
 
 function plz_add_to_signin_menu(){
