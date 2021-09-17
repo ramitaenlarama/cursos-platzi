@@ -62,3 +62,37 @@ function plz_add_sidebar(){
 }
 
 add_action("widgets_init","plz_add_sidebar");
+
+
+function plz_add_custom_post_type(){
+
+    $labels = array(
+        'name' => 'Producto',
+        'singular_name' => 'Producto',
+        'all_items' => 'Todos los productos',
+        'add_new' => 'Añadir producto'
+    );
+        
+    $args = array(
+        'labels'             => $labels,
+        'description'        => 'Productos para listar en un catálogos.',
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'producto' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail' ),
+        'taxonomies'         => array('category'),
+        'show_in_rest'       => true,
+        'menu_icon'          => 'dashicons-cart'
+    );
+
+
+    register_post_type('producto',$args);
+}
+
+add_action("init","plz_add_custom_post_type");
